@@ -1,13 +1,12 @@
 ## ECDSA Node
 
-This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
+This project is a solution to the ECDSA project as part of the Alchemy Ethereum bootcamp. The project is a simple client/server application that allows users to transfer funds between different addresses. The server is a node.js application that uses express to handle requests. The client is a react application that uses vite to handle requests. 
 
-However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
+The project uses public key cryptography in the following way:
 
-### Video instructions
-For an overview of this project as well as getting started instructions, check out the following video:
-
-https://www.loom.com/share/0d3c74890b8e44a5918c4cacb3f646c4
+- The user inputs their own private key (done this way for learning purposes only)
+- The client application uses the private key to generate a public key
+- If there is a fitting public key in the server, the server will execute the transfer and adjust balances
  
 ### Client
 
